@@ -1,15 +1,12 @@
-def is_sorted(number_list):
-    for i in range(len(number_list) -1):
-        if number_list[i] > number_list[i+1]:
-            return False
-    return True
-
 def bubble_sort(number_list):
-    while not is_sorted(number_list):
+    flag = False
+    while flag == False:
+        flag = True
         length = len(number_list)
         times = 0
         for i in range(length - 1, times, -1):
             if number_list[i-1] > number_list[i]:
+                flag = False
                 number_list[i-1], number_list[i] = number_list[i], number_list[i-1]
         times += 1
     else:
